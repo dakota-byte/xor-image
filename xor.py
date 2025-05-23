@@ -1,6 +1,6 @@
 # Imports
 from PIL import Image
-import argparse, random,  io
+import argparse, random, io, os
 
 # For the purposes of making the tool easy to use
 parser = argparse.ArgumentParser(
@@ -41,7 +41,7 @@ def binary_image(IMAGE_FILENAME):
             else:
                 pixels[i,j] = (0,0,0)
 
-    filename = f"binary_img_{IMAGE_FILENAME}"
+    filename = f"binary_img_{os.path.basename(IMAGE_FILENAME)}"
     img.save(filename)
     print(f"Created {filename}")
     img.close()
@@ -62,7 +62,7 @@ def _and(IMAGE_FILENAME):
             color = rgbtoint((r,g,b))
             pixels[i,j] = color & random.getrandbits(24)
 
-    filename = f"and_{IMAGE_FILENAME}"
+    filename = f"and_{os.path.basename(IMAGE_FILENAME)}"
     img.save(filename)
     print(f"Created {filename}")
     img.close()
@@ -79,7 +79,7 @@ def _or(IMAGE_FILENAME):
             color = rgbtoint((r,g,b))
             pixels[i,j] = color | random.getrandbits(24)
 
-    filename = f"or_{IMAGE_FILENAME}"
+    filename = f"or_{os.path.basename(IMAGE_FILENAME)}"
     img.save(filename)
     print(f"Created {filename}")
     img.close()
@@ -96,7 +96,7 @@ def _xor(IMAGE_FILENAME):
             color = rgbtoint((r,g,b))
             pixels[i,j] = color ^ random.getrandbits(24)
 
-    filename = f"xor_{IMAGE_FILENAME}"
+    filename = f"xor_{os.path.basename(IMAGE_FILENAME)}"
     img.save(filename)
     print(f"Created {filename}")
     img.close()
