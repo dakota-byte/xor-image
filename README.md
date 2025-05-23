@@ -2,6 +2,8 @@
 
 A demonstration of using certain binary operations on an image.
 
+![example](showcase.png)
+
 View the examples in the folders example1/ and example2/ :)
 
 ```
@@ -22,11 +24,6 @@ options:
 You can supply any number of flags.
 ```
 
-The key used is randomly generated on the fly.
-
-The key is not saved anywhere so you cannot undo the operation. I plan
-to create another tool in the future to do that.
-
 Example usage:
 
 ```
@@ -35,3 +32,13 @@ $ Created and_galaxy.png
 $ Created xor_galaxy.png
 $ Done.
 ```
+
+### Future Improvements
+
+- The key used is randomly generated on the fly. An option to supply a file as a key.
+
+- The key is not saved anywhere so you cannot undo the operation. I plan
+to create another tool in the future to do that.
+
+- Refactor the code because there is too much copy pasting...
+
