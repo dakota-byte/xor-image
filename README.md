@@ -2,6 +2,7 @@
 
 A demonstration of using certain binary operations on an image.
 
+View the examples in the folders example1/ and example2/ :)
 
 ```
 usage: xor-image-tool [-h] [-a] [-o] [-x] [-b] [-s] filename
